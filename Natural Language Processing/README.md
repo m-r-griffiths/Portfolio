@@ -1,4 +1,4 @@
-# Measuring the readiness of the UK Civil Service to deliver ambitous change
+# Measuring the readiness of the UK Civil Service to deliver ambitious change
 
 ## Problem
 At the time of this analysis, a new admistration in the UK was committed to a set of five missions in order to "put an end to sticking plaster politics". A mission-driven approach to governing is a commitment to a set of ambitious goals - such as achieving net zero - that cut across existing organisational boundaries, and that require innovation and cross-sector collaboration to achieve them.
