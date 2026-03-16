@@ -20,6 +20,6 @@ The analysis is based on 35 documents from the literature, and nearly 5,000 civi
 ## Results
 A heat-map comparison of how important a skill is in expert literature compared to its importance in the bank of Civil Service job vacancies shows this picture:
 
-
+- ![Preview](./heatmap.png)
 
 **How to Reproduce**
