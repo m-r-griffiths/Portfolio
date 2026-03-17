@@ -1,33 +1,34 @@
 # Applying supervised learning to predict student drop-out
 
-![Preview](./customer_clusters.png)
+![Preview](./student_drop_outs.png)
 - **Background**: This was an assessed project that I completed as part of my course on Data Science, with Machine Learning and AI, at the University of Cambridge.
-- **Problem**: Create, HP tune and evaluate XGBoost and Keras models to predict student drop-out on three data sets that progressively add in more student information.
-- **Data**: 25_000 + rows, with each row representing a student. Three sets of data were provided for the models to operate on. At Stage One, demographic data is presented. At Stage Two, behavioural data is introduced. At Stage Three, studnet achivement is introduced, whereby the models become descriptive, rather than predictive.
+- **Problem**: Create, HP tune and evaluate XGBoost and Keras models to predict student drop-out on three data sets that progressively provide more student information.
+- **Data**: 25_000 + rows, with each row representing a student. Three sets of data were provided for the models to operate on. At Stage One, demographic data is presented. At Stage Two, behavioural data is introduced. At Stage Three, student achivement data is introduced.
 - **Deliverables**: Gooogle Collab notebook with full workflow and visuals, PDF report with findings and recommendations.
 
 ## Approach
 - **Data cleaning**:
-  - Identified and removed duplicate records
-  - Converted `Order_Date`, `Delivery_Date`, and `Customer_BirthDate` to datetime.
+  - Remove any columns not useful in the analysis.
+  - Remove columns with categorical features with high cardinality (>200 unique values).
+  - Remove columns with > 50% data missing.
+  - Ordinal encoding for ordinal data.
+  - One-hot encoding for all other categorical data
 - **Feature engineering**:
-  - Customer-level aggregation to one row per customer.
-  - Computed five core metrics: purchase frequency, recency, customer lifetime value (CLV), average unit cost, and customer age.
-  - Scaled features (and encoded if required via pipelines/column transformers).
+  - When missing, Home City imputed based on the mode value for the student's nationality
 - **Model selection**:
-  - Determined candidate `k` via Elbow and Silhouette analyses.
-  - Explored hierarchical clustering (dendrogram) for structure and potential `k`.
-  - Trained K-means with selected `k` and profiled clusters.
-- **Visualisation**:
-  - Boxplots of clusters vs. each feature (frequency, recency, CLV, avg. unit cost, age).
-  - 2D embeddings with PCA and t-SNE to display cluster separation.
+  - XGBoost - baseline models and hp tuned
+  - Keras - baseline models and hp tuned
+  - Given imbalance in the dataset, the loss metric used was Precision, Recall Area Under the Curve (PR_AUC)
+- **Visualisations**:
+  - Confusion Matrixes
+  - Plots of PR_AUC
+  - SHAP values
 
 ## Key Results
-- **Optimal k**: Selected using Silhouette and Elbow criteria, corroborated by hierarchical structure.
-- **Cluster profiles**: Distinct segments by spend (CLV), purchase cadence (frequency/recency), price sensitivity (avg. unit cost), and age bands. Actionable personas identified for targeted campaigns and retention strategies.
+- **At risk factors**: When student demographic data only is avaialble, where students are from and where they study should guide a support strategy to minimise the risk of student drop-out. When behavioural data - such as authorised and unauthorised absences - is available, predictive accuracy increases. Student achievement data appears to be a surrogate for actual studnet drop-outs, and has little predictive worth.
+- **Preferred model**: hp tuning delivered very small improvements on the baseline models. XGBoost performed better than Keras, but by a small degree
 
 ## How to Reproduce
-1. Open Customer_Segmentation_with_Clustering.ipynb.
-2. Ensure dependencies are installed:
-   - pandas, numpy, scikit-learn, matplotlib, seaborn, scipy
-3. Run cells sequentially. The notebook loads data from the provided public URL, performs cleaning, aggregation, selection of `k`, clustering, and visualisations.
+1. Open Applying supervised learning to predict student dropout .ipynb
+2. Ensure dependencies are installed
+3. Run cells sequentially. The notebook loads data from the provided public URL.
