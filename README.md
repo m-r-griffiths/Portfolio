@@ -1,7 +1,7 @@
 # About Me
 I am an interdisciplinary data scientist and social impact leader dedicated to using advanced computational methods - from NLP to Machine Learning - to address complex social problems. 
 
-My career has come full circle: I began as a coder and a consultant, before taking-up Director level roles leading research and social innovation at organisations like NESTA, Pearson and the Queen Rania Foundation.
+My career has come full circle: I began as a coder and a consultant, before taking-up Director level roles leading research and social innovation at organisations such as Pearson and the Queen Rania Foundation.
 
 I then became obsessed with the potential of Data Science, Machine Learning and AI to make sense of the world.
 
