@@ -1,7 +1,5 @@
 # Detecting the anomalous activity of a ship’s engine
 
-- ![Preview](./preview.png)
-
 - **Context** This project was an assessed project that I completed as part of my course on Data Science, with Machine Learning and AI, at the University of Cambridgde
 - **Problem**: Detect anomalous engine activity in order to reduce downtime and safety risk across a shipping fleet.
 - **Data**: c.20_000 records, six feaures of engine status: `engine_rpm`, `oil_pressure`, `fuel_pressure`, `coolant_pressure`, `oil_temp`, `coolant_temp`.
