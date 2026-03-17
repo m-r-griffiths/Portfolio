@@ -4,7 +4,7 @@
 - **Background**: This was an assessed project that I completed as part of my course in Data Science, with Machine Learning and AI, at the University of Cambridge.
 - **Problem**: Segment customers of a multinational e-commerce company to inform targeted marketing and retention strategies.
 - **Data**: 951k+ order rows across 47 countries (2012–2016). Final modelling uses customer-level features: frequency, recency, CLV, average unit cost, and age.
-- **Deliverables**: Jupyter notebook with full workflow and visuals, PDF report with findings and recommendations.
+- **Deliverables**: Google Collab notebook with full workflow and visuals, PDF report with findings and recommendations.
 
 ## Approach
 - **Data cleaning**:
