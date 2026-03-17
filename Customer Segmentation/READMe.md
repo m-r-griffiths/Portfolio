@@ -28,7 +28,7 @@
 - **Cluster profiles**: Distinct segments by spend (CLV), purchase cadence (frequency/recency), price sensitivity (avg. unit cost), and age bands. Actionable personas identified for targeted campaigns and retention strategies.
 
 ## How to Reproduce
-1. Open .
+1. Open Customer_Segmentation_with_Clustering.ipynb.
 2. Ensure dependencies are installed:
    - pandas, numpy, scikit-learn, matplotlib, seaborn, scipy
 3. Run cells sequentially. The notebook loads data from the provided public URL, performs cleaning, aggregation, selection of `k`, clustering, and visualisations.
