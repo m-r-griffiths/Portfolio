@@ -1,6 +1,6 @@
 # Forecasting future book sales
 
-![Preview](./student_drop_outs.png)
+![Preview](./Sales Forecast.png)
 - **Background**: This was an assessed project, completed as part of my course on Data Science, with Machine Learning and AI, at the University of Cambridge.
 - **Problem**: Using historical book sales data, identify the best model for predicting book sales in the next 32 weeks  
 - **Data**: Sales information on 61 book titles, covering the period January 2021 to July 2024, sourced from Nielsen's BookScan service
