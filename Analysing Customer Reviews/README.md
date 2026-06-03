@@ -1,6 +1,6 @@
 # Using Natural Langauge Processing (NLP) to identify options for operational improvements in a restaurant chain
 
-![Preview](./wordcloud.png)
+![Preview](./Wordcloud.png)
 - **Background**: This was an assessed project that I completed as part of my course on Data Science, with Machine Learning and AI, at the University of Cambridge. The reviewer kindly described the insights derived as 'excellent' and 'likley to be very useful to stakeholders'.  
 - **Problem**: Use NLP techniques to identify, from on-line reviews of a restaurant chain, options for improving the customer experience.
 - **Data**: The original datasets were real on-line reviews of a wellbeing chain. For privacy reasons, the analysis here has been carried out on synthetic data.
