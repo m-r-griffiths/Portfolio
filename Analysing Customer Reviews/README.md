@@ -31,4 +31,4 @@
 ## How to Reproduce
 1. Open Applying supervised learning to predict student dropout .ipynb
 2. Ensure dependencies are installed
-3. Run cells sequentially. The notebook loads data from the two csv files in this folder:.
+3. Run cells sequentially. The notebook loads data from the two csv files (stored in this folder): FastFood_google.csv & FastFood_trustpilot.csv.
