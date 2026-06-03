@@ -1,34 +1,34 @@
-# Applying supervised learning to predict student drop-out
+# Using Natural Langauge Processing (NLP) to identify options for operational improvements in a restaurant chain
 
-![Preview](./student_drop_outs.png)
-- **Background**: This was an assessed project that I completed as part of my course on Data Science, with Machine Learning and AI, at the University of Cambridge.
-- **Problem**: Create, HP tune and evaluate XGBoost and Keras models to predict student drop-out on three data sets that progressively provide more student information.
-- **Data**: 25_000 + rows, with each row representing a student. Three sets of data were provided for the models to operate on. At Stage One, demographic data is presented. At Stage Two, behavioural data is introduced. At Stage Three, student achivement data is introduced.
+![Preview](./word_cloud.png)
+- **Background**: This was an assessed project that I completed as part of my course on Data Science, with Machine Learning and AI, at the University of Cambridge. The reviewer kindly described the insights derived as 'excellent' and 'likley to be very useful to stakeholders'.  
+- **Problem**: Use NLP techniques to identify, from on-line reviews of a restaurant chain, options for improving the customer experience.
+- **Data**: The original datasets were real on-line reviews of a wellbeing chain. For privacy reasons, the analysis here has been carried out on synthetic data.
 - **Deliverables**: Gooogle Collab notebook with full workflow and visuals, PDF report with findings and recommendations.
 
 ## Approach
 - **Data cleaning**:
-  - Remove any columns not useful in the analysis.
-  - Remove columns with categorical features with high cardinality (>200 unique values).
-  - Remove columns with > 50% data missing.
-  - Ordinal encoding for ordinal data.
-  - One-hot encoding for all other categorical data
-- **Feature engineering**:
-  - When missing, Home City imputed based on the mode value for the student's nationality
-- **Model selection**:
-  - XGBoost - baseline models and hp tuned
-  - Keras - baseline models and hp tuned
-  - Given imbalance in the dataset, the loss metric used was Precision, Recall Area Under the Curve (PR_AUC)
+  - Remove reviews with missing long-text content.
+  - Remove reviews not in English.
+- **Data preparation**:
+  - Tokenise text and remove stop-words.    
+- **Analysis Stages**:
+  - Identify the most frequently occuring words in i) all customer reviews and ii) negative reviews.
+  - Use BERTopic to to identify the themes in:
+    i) negative reviews
+    ii) reviews from restaurant locations that generate the most negative reviews, and
+    iii) reviews where anger is the dominant emotion
+  - Use a large language model, in combination with BERTopic, to do the same.
 - **Visualisations**:
-  - Confusion Matrixes
-  - Plots of PR_AUC
-  - SHAP values
+  - Word frequency counts and word clouds
+  - Geographic mapping of restaurants that generate the most negative reviews
+  - BERTopic visualisations
 
 ## Key Results
-- **At risk factors**: When student demographic data only is avaialble, where students are from and where they study should guide a support strategy to minimise the risk of student drop-out. When behavioural data - such as authorised and unauthorised absences - is available, predictive accuracy increases. Student achievement data appears to be a surrogate for actual studnet drop-outs, and has little predictive worth.
-- **Preferred model**: hp tuning delivered very small improvements on the baseline models. XGBoost performed better than Keras, but by a small degree
+- Focusing on reviews where anger is the dominant emotion is most likley to reduce customer churn. Key improvement opportunities here are: reducing waiting time for food, improving order accuracy and ensuring the cleanliness of tables.
+- Five London restuarants are priorities for site specific improvements. 
 
 ## How to Reproduce
 1. Open Applying supervised learning to predict student dropout .ipynb
 2. Ensure dependencies are installed
-3. Run cells sequentially. The notebook loads data from the provided public URL.
+3. Run cells sequentially. The notebook loads data from the two csv files in this folder:.
