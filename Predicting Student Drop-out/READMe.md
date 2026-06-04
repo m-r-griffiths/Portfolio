@@ -32,6 +32,6 @@
 - **Preferred model**: hp tuning delivered very small improvements on the baseline models. XGBoost performed better than Keras, but by a small degree
 
 ## How to Reproduce
-1. Open Applying supervised learning to predict student dropout.ipynb
+1. Open Applying_supervised_learning_to_predict_student_dropout.ipynb
 2. Ensure dependencies are installed
 3. Run cells sequentially. The notebook loads data from the provided public URL.
