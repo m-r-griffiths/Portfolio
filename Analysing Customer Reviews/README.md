@@ -29,6 +29,6 @@
 - Five London restuarants are priorities for site specific improvements. 
 
 ## How to Reproduce
-1. Open Applying supervised learning to predict student dropout .ipynb
+1. Open Analysing_Customer_Reviews_of_a_Restaurant_Chain.ipynb
 2. Ensure dependencies are installed
 3. Run cells sequentially. The notebook loads data from the two csv files (stored in this folder): FastFood_google.csv & FastFood_trustpilot.csv.
